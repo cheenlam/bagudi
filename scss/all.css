@@ -1,0 +1,427 @@
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, th {
+  font-weight: normal;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  font-family: 'Helvetica', sans-serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: none;
+}
+
+*:hover, *:focus, *:active {
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+tt, em {
+  font-family: 'Helvetica', sans-serif;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button,
+input[type="button"],
+input[type="text"],
+input[type="number"],
+textarea {
+  outline: none;
+  font-family: 'Helvetica', sans-serif;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+input::-ms-reveal {
+  display: none;
+}
+
+input[type="password"]::-webkit-textfield-decoration-container {
+  visibility: hidden;
+}
+
+.nofloat:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* ::-webkit-scrollbar{ 
+	width:10px;
+	height: 10px;
+	background-color:#f1f1f1;
+} */
+::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border: 3px #f1f1f1 solid;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: background .5s linear;
+  transition: background .5s linear;
+}
+
+*:hover::-webkit-scrollbar-thumb {
+  background-color: #a9a9a9;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #f1f1f1;
+}
+
+img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.loginBox {
+  width: 100%;
+  height: 100vh;
+  background: url(../images/bg/loginBg.webp) no-repeat center top/cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: auto;
+}
+
+.loginBox .innerBox {
+  width: 300px;
+  padding: 100px 10px 0;
+}
+
+.loginBox .innerBox .logo {
+  width: 50%;
+  margin: 0 auto 30px;
+}
+
+.loginBox .innerBox .iptBox {
+  margin-bottom: 20px;
+}
+
+.loginBox .innerBox .iptBox .list {
+  margin-bottom: 5px;
+}
+
+.loginBox .innerBox .iptBox .list li {
+  height: 43px;
+  padding: 0 10px 0 15px;
+  border-radius: 43px;
+  background-color: #c8cbd4;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loginBox .innerBox .iptBox .list li label {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loginBox .innerBox .iptBox .list li + li {
+  margin-top: 12px;
+}
+
+.loginBox .innerBox .iptBox .list input {
+  width: 100%;
+  background: transparent;
+  outline: none;
+  border: none;
+  padding: 0 10px;
+  font-size: 15px;
+  color: #2c2f3a;
+}
+
+.loginBox .innerBox .iptBox .list .icon {
+  width: 22px;
+  height: 22px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background: no-repeat center;
+}
+
+.loginBox .innerBox .iptBox .list .icon.user {
+  background-image: url(../images/icon/idCard.svg);
+}
+
+.loginBox .innerBox .iptBox .list .icon.pwd {
+  background-image: url(../images/icon/key.svg);
+}
+
+.loginBox .innerBox .iptBox .list .icon.verify {
+  background-image: url(../images/icon/shield.svg);
+}
+
+.loginBox .innerBox .iptBox .list .icon.eye {
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/icon/eye_off.svg);
+  cursor: pointer;
+}
+
+.loginBox .innerBox .iptBox .list .icon.eye.on {
+  background-image: url(../images/icon/eye_on.svg);
+}
+
+.loginBox .innerBox .iptBox .list .codeNum {
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background-color: #d22b25;
+  color: #fff;
+  cursor: pointer;
+}
+
+.loginBox .innerBox .iptBox .tool {
+  padding: 0 10px;
+  color: #eee;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.loginBox .innerBox .iptBox .tool .ckBox label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.loginBox .innerBox .iptBox .tool .ckBox input {
+  display: none;
+}
+
+.loginBox .innerBox .iptBox .tool .ckBox .icon {
+  width: 22px;
+  height: 22px;
+  margin-left: 3px;
+  background: url(../images/icon/ckBox_off.svg) no-repeat center top/cover;
+}
+
+.loginBox .innerBox .iptBox .tool .ckBox input:checked + .icon {
+  background-image: url(../images/icon/ckBox_on.svg);
+}
+
+.loginBox .innerBox .submitBox {
+  padding-bottom: 50px;
+}
+
+.loginBox .innerBox .submitBox button {
+  background: transparent;
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 45px;
+  border-radius: 45px;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #90e8f8, #0261fc);
+  cursor: pointer;
+}
+
+.loginBox .innerBox .submitBox .tool {
+  padding-top: 10px;
+  color: #eee;
+  font-size: 12px;
+}
+
+.loginBox .innerBox .submitBox .tool ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loginBox .innerBox .submitBox .tool li {
+  position: relative;
+}
+
+.loginBox .innerBox .submitBox .tool li + li {
+  margin-left: 20px;
+}
+
+.loginBox .innerBox .submitBox .tool li + li::before {
+  content: '|';
+  position: absolute;
+  top: 0;
+  left: -10px;
+}
+
+body {
+  background: url(../test.jpg) no-repeat center top/1920px;
+}
+
+.homeBox {
+  height: 3000px;
+}
+
+.hdBox {
+  background-color: #EBEFFA;
+}
+
+.hdBox .inner {
+  width: 1290px;
+  padding: 10px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hdBox .logo {
+  margin-right: 68px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.hdBox .hdMain {
+  width: 100%;
+}
+
+.hdBox .hdMain .tool {
+  padding-right: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.hdBox .hdMain .tool .time {
+  font-size: 12px;
+  color: #325882;
+}
+
+.hdBox .hdMain .tool .userOp {
+  margin: 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 12.8px;
+  color: #fff;
+}
+
+.hdBox .hdMain .tool .btn {
+  height: 32px;
+  padding: 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hdBox .hdMain .tool .btn.login {
+  background-color: #4C516F;
+}
+
+.hdBox .hdMain .tool .btn.register {
+  background-color: #D32A23;
+}
+
+.hdBox .hdMain .tool .btn + .btn {
+  margin-left: 10px;
+}
+
+.hdBox .hdMain .tool .langSel .iocn {
+  width: 32px;
+}
+
+.hdBox .hdMain .menu {
+  padding-top: 20px;
+}
+
+.hdBox .hdMain .menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #404261;
+  font-weight: bold;
+}
+
+.hdBox .hdMain .menu li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
+.carouselBox li {
+  height: 707px;
+  background: url(../images/banner/banner_01.webp) no-repeat center top/cover;
+}
+/*# sourceMappingURL=all.css.map */

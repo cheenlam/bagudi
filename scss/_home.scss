@@ -1,0 +1,83 @@
+body{
+    background: url(../test.jpg) no-repeat center top /1920px;
+}
+.homeBox{
+    height: 3000px;
+}
+
+.hdBox{
+    background-color: #EBEFFA;
+    .inner{
+        width: 1290px;
+        padding: 10px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo{
+        margin-right: 68px;
+        flex-shrink: 0;
+    }
+    .hdMain{
+        width: 100%;
+        .tool{
+            padding-right: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            .time{  
+                font-size: 12px;
+                color: #325882;
+            }
+            .userOp{
+                margin: 0 15px;
+                display: flex;
+                font-size: 12.8px;
+                color: #fff;
+            }
+            .btn{
+                height: 32px;
+                padding: 0 15px;
+                display: flex;
+                align-items: center;
+                border-radius: 5px;
+                cursor: pointer;
+                &.login{
+                    background-color: #4C516F;
+                }
+                &.register{
+                    background-color: #D32A23;
+                }
+            }
+            .btn+.btn{
+                margin-left: 10px;
+            }
+            .langSel{
+                .iocn{
+                    width: 32px;
+                }
+            }
+        }
+        .menu{
+            padding-top: 20px;
+            ul{
+                display: flex;
+                justify-content: flex-end;
+                color: #404261;
+                font-weight: bold;
+            }
+            li{
+                flex: 1;
+                text-align: center;
+            }
+        }
+    } 
+}
+
+.carouselBox{
+    li{
+        height: 707px;
+        background: url(../images/banner/banner_01.webp) no-repeat center top /cover;
+    }
+}
