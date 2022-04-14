@@ -35,3 +35,34 @@
         @content;
     }
 }
+
+// 圖片替換文字
+@mixin imgToTxt {
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+// 取消預設樣式
+@mixin fullNone {
+    background: transparent;
+    outline: none;
+    border: none;
+}
+
+// 文字斷行顯示點點點(參數輸入行數)
+@mixin txtChip($row) {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $row;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
+@mixin rwd($data){
+    @media screen and (max-width: #{$data}px){
+        @content;
+    }
+}
