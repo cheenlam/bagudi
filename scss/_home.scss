@@ -7,7 +7,7 @@ body {
 .homeBox {
     min-width: 1280px;
     // === hdBox start ===
-    @at-root .hdBox {
+    .hdBox {
         background-color: #ebeffa;
         .inner {
             max-width: 1280px;
@@ -157,7 +157,7 @@ body {
     }
 
     // === infoBox start ===
-    @at-root .infoBox {
+    .infoBox {
         padding: 100px 0;
         background: url(../images/bg/infoBg.webp) no-repeat center / 1920px 2410px;
         position: relative;
@@ -253,7 +253,7 @@ body {
     }
 
     // === ftBox start ===
-    @at-root .ftBox{
+    .ftBox{
         .ftMenu{
             padding: 30px 10px;
             ul{
@@ -306,7 +306,7 @@ body {
     }
 
     // === ftBox start ===
-    @at-root .serviceBtn{
+    .serviceBtn{
         width: 70px;
         height: 70px;
         border-radius: 50%;

@@ -330,11 +330,11 @@ body::-webkit-scrollbar {
   min-width: 1280px;
 }
 
-.hdBox {
+.homeBox .hdBox {
   background-color: #ebeffa;
 }
 
-.hdBox .inner {
+.homeBox .hdBox .inner {
   max-width: 1280px;
   padding: 10px;
   margin: auto;
@@ -349,17 +349,17 @@ body::-webkit-scrollbar {
           justify-content: space-between;
 }
 
-.hdBox .logo {
+.homeBox .hdBox .logo {
   margin-right: 60px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-.hdBox .hdMain {
+.homeBox .hdBox .hdMain {
   width: 100%;
 }
 
-.hdBox .hdMain .tool {
+.homeBox .hdBox .hdMain .tool {
   padding-right: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -372,12 +372,12 @@ body::-webkit-scrollbar {
           justify-content: flex-end;
 }
 
-.hdBox .hdMain .tool .time {
+.homeBox .hdBox .hdMain .tool .time {
   font-size: 12px;
   color: #325882;
 }
 
-.hdBox .hdMain .tool .userOp {
+.homeBox .hdBox .hdMain .tool .userOp {
   margin: 0 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -386,7 +386,7 @@ body::-webkit-scrollbar {
   color: #fff;
 }
 
-.hdBox .hdMain .tool .btn {
+.homeBox .hdBox .hdMain .tool .btn {
   height: 32px;
   padding: 0 15px;
   display: -webkit-box;
@@ -399,23 +399,23 @@ body::-webkit-scrollbar {
   cursor: pointer;
 }
 
-.hdBox .hdMain .tool .btn.login {
+.homeBox .hdBox .hdMain .tool .btn.login {
   background-color: #4c516f;
 }
 
-.hdBox .hdMain .tool .btn.register {
+.homeBox .hdBox .hdMain .tool .btn.register {
   background-color: #d32a23;
 }
 
-.hdBox .hdMain .tool .btn + .btn {
+.homeBox .hdBox .hdMain .tool .btn + .btn {
   margin-left: 10px;
 }
 
-.hdBox .hdMain .tool .langSel {
+.homeBox .hdBox .hdMain .tool .langSel {
   position: relative;
 }
 
-.hdBox .hdMain .tool .langSel .nowLang {
+.homeBox .hdBox .hdMain .tool .langSel .nowLang {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -425,18 +425,18 @@ body::-webkit-scrollbar {
   cursor: pointer;
 }
 
-.hdBox .hdMain .tool .langSel .nowLang .flag {
+.homeBox .hdBox .hdMain .tool .langSel .nowLang .flag {
   width: 32px;
   margin-right: 8px;
 }
 
-.hdBox .hdMain .tool .langSel .nowLang .arrow {
+.homeBox .hdBox .hdMain .tool .langSel .nowLang .arrow {
   width: 11px;
   height: 7px;
   background: url(../images/icon/sort-down.svg) no-repeat center/cover;
 }
 
-.hdBox .hdMain .tool .langSel .langList {
+.homeBox .hdBox .hdMain .tool .langSel .langList {
   background-color: #fff;
   border: 1px solid #999;
   position: absolute;
@@ -445,11 +445,11 @@ body::-webkit-scrollbar {
   z-index: 5;
 }
 
-.hdBox .hdMain .tool .langSel .langList .flag {
+.homeBox .hdBox .hdMain .tool .langSel .langList .flag {
   margin-right: 5px;
 }
 
-.hdBox .hdMain .tool .langSel .langList li {
+.homeBox .hdBox .hdMain .tool .langSel .langList li {
   padding: 8px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -461,31 +461,31 @@ body::-webkit-scrollbar {
 }
 
 @media (any-hover: hover) {
-  .hdBox .hdMain .tool .langSel .langList li:hover {
+  .homeBox .hdBox .hdMain .tool .langSel .langList li:hover {
     background: linear-gradient(30deg, #66a1e7, #242d87);
     color: #fff;
   }
 }
 
-.hdBox .hdMain .tool .langSel .flag {
+.homeBox .hdBox .hdMain .tool .langSel .flag {
   width: 32px;
   height: 21px;
   background: no-repeat center /cover;
 }
 
-.hdBox .hdMain .tool .langSel .flag.cn {
+.homeBox .hdBox .hdMain .tool .langSel .flag.cn {
   background-image: url(../images/flag/flag_cn.jpg);
 }
 
-.hdBox .hdMain .tool .langSel .flag.kr {
+.homeBox .hdBox .hdMain .tool .langSel .flag.kr {
   background-image: url(../images/flag/flag_kr.jpg);
 }
 
-.hdBox .hdMain .menu {
+.homeBox .hdBox .hdMain .menu {
   padding-top: 20px;
 }
 
-.hdBox .hdMain .menu ul {
+.homeBox .hdBox .hdMain .menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -496,7 +496,7 @@ body::-webkit-scrollbar {
   font-weight: bold;
 }
 
-.hdBox .hdMain .menu li {
+.homeBox .hdBox .hdMain .menu li {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -548,24 +548,24 @@ body::-webkit-scrollbar {
   padding-bottom: 3px;
 }
 
-.infoBox {
+.homeBox .infoBox {
   padding: 100px 0;
   background: url(../images/bg/infoBg.webp) no-repeat center/1920px 2410px;
   position: relative;
 }
 
-.infoBox .mainImg {
+.homeBox .infoBox .mainImg {
   width: 100%;
   margin-bottom: 7vw;
 }
 
 @media screen and (max-width: 1400px) {
-  .infoBox .mainImg {
+  .homeBox .infoBox .mainImg {
     margin-bottom: 40px;
   }
 }
 
-.infoBox .infoTitle {
+.homeBox .infoBox .infoTitle {
   width: 358px;
   margin: auto;
   position: absolute;
@@ -574,7 +574,7 @@ body::-webkit-scrollbar {
 }
 
 @media screen and (max-width: 1400px) {
-  .infoBox .infoTitle {
+  .homeBox .infoBox .infoTitle {
     width: 250px;
     margin-bottom: 50px;
     position: relative;
@@ -583,60 +583,60 @@ body::-webkit-scrollbar {
   }
 }
 
-.infoBox .infoTitle .logo {
+.homeBox .infoBox .infoTitle .logo {
   width: 97%;
   margin-bottom: 41px;
 }
 
 @media screen and (max-width: 1400px) {
-  .infoBox .infoTitle .logo {
+  .homeBox .infoBox .infoTitle .logo {
     margin-bottom: 30px;
   }
 }
 
-.infoBox .infoTitle .txtBox {
+.homeBox .infoBox .infoTitle .txtBox {
   text-align: center;
   font-weight: bold;
 }
 
-.infoBox .infoTitle .txtBox .title {
+.homeBox .infoBox .infoTitle .txtBox .title {
   font-size: 50px;
   color: #fff;
 }
 
 @media screen and (max-width: 1400px) {
-  .infoBox .infoTitle .txtBox .title {
+  .homeBox .infoBox .infoTitle .txtBox .title {
     font-size: 35px;
   }
 }
 
-.infoBox .infoTitle .txtBox .line {
+.homeBox .infoBox .infoTitle .txtBox .line {
   margin: 10px 0 29px;
 }
 
 @media screen and (max-width: 1400px) {
-  .infoBox .infoTitle .txtBox .line {
+  .homeBox .infoBox .infoTitle .txtBox .line {
     margin: 10px 0 15px;
   }
 }
 
-.infoBox .infoTitle .txtBox p {
+.homeBox .infoBox .infoTitle .txtBox p {
   font-size: 31px;
   color: #4197fc;
 }
 
 @media screen and (max-width: 1400px) {
-  .infoBox .infoTitle .txtBox p {
+  .homeBox .infoBox .infoTitle .txtBox p {
     font-size: 25px;
   }
 }
 
-.infoBox .infoList {
+.homeBox .infoBox .infoList {
   max-width: 1100px;
   margin: auto;
 }
 
-.infoBox .infoList ul {
+.homeBox .infoBox .infoList ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -648,7 +648,7 @@ body::-webkit-scrollbar {
           justify-content: center;
 }
 
-.infoBox .infoList li {
+.homeBox .infoBox .infoList li {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -670,34 +670,34 @@ body::-webkit-scrollbar {
   font-weight: bold;
 }
 
-.infoBox .infoList .icon {
+.homeBox .infoBox .infoList .icon {
   width: 138px;
   height: 138px;
   margin-bottom: 10px;
   background: no-repeat center / cover;
 }
 
-.infoBox .infoList .icon.crowd {
+.homeBox .infoBox .infoList .icon.crowd {
   background-image: url(../images/icon/info_crowd.webp);
 }
 
-.infoBox .infoList .icon.file {
+.homeBox .infoBox .infoList .icon.file {
   background-image: url(../images/icon/info_file.webp);
 }
 
-.infoBox .infoList .icon.process {
+.homeBox .infoBox .infoList .icon.process {
   background-image: url(../images/icon/info_process.webp);
 }
 
-.infoBox .infoList .icon.bank {
+.homeBox .infoBox .infoList .icon.bank {
   background-image: url(../images/icon/info_bank.webp);
 }
 
-.ftBox .ftMenu {
+.homeBox .ftBox .ftMenu {
   padding: 30px 10px;
 }
 
-.ftBox .ftMenu ul {
+.homeBox .ftBox .ftMenu ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -706,7 +706,7 @@ body::-webkit-scrollbar {
           justify-content: center;
 }
 
-.ftBox .ftMenu li {
+.homeBox .ftBox .ftMenu li {
   padding: 0 14px;
   color: #2c2f3a;
   font-size: 14px;
@@ -714,7 +714,7 @@ body::-webkit-scrollbar {
   position: relative;
 }
 
-.ftBox .ftMenu li + li::before {
+.homeBox .ftBox .ftMenu li + li::before {
   content: '';
   width: 1px;
   height: 100%;
@@ -726,15 +726,15 @@ body::-webkit-scrollbar {
   left: 0;
 }
 
-.ftBox .ftLink {
+.homeBox .ftBox .ftLink {
   background-color: #46474C;
 }
 
-.ftBox .ftLink .list {
+.homeBox .ftBox .ftLink .list {
   padding: 50px 10px;
 }
 
-.ftBox .ftLink .list ul {
+.homeBox .ftBox .ftLink .list ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -743,15 +743,15 @@ body::-webkit-scrollbar {
           justify-content: center;
 }
 
-.ftBox .ftLink .list li + li {
+.homeBox .ftBox .ftLink .list li + li {
   margin-left: 50px;
 }
 
-.ftBox .ftLink .list img {
+.homeBox .ftBox .ftLink .list img {
   height: 38px;
 }
 
-.ftBox .ftLink .copyright {
+.homeBox .ftBox .ftLink .copyright {
   padding: 15px 10px;
   background-color: #35373e;
   text-align: center;
@@ -759,7 +759,7 @@ body::-webkit-scrollbar {
   font-size: 14px;
 }
 
-.serviceBtn {
+.homeBox .serviceBtn {
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -1988,5 +1988,378 @@ body::-webkit-scrollbar {
     -webkit-transform: scale(0.95);
             transform: scale(0.95);
   }
+}
+
+.indexBody {
+  width: 100%;
+  height: 100vh;
+  font-family: Microsoft JhengHei;
+  overflow: auto;
+  background: #0c0c0c url(../images/bg/loginBg.webp) no-repeat fixed left bottom/1920px 1080px;
+}
+
+.indexBody::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.indexBody .hdBox {
+  border-bottom: 6px solid #b68141;
+  background-color: #0c0c0c;
+}
+
+.indexBody .hdBox .hdBody {
+  max-width: 1920px;
+}
+
+.indexBody .hdBox .inner {
+  width: 100%;
+  min-width: 1200px;
+  margin: auto;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.indexBody .hdBox .logo {
+  width: 94px;
+}
+
+.indexBody .hdMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.indexBody .hdTool {
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.indexBody .hdTool .langSel {
+  margin-right: 20px;
+  position: relative;
+}
+
+.indexBody .hdTool .langSel .nowLang {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.indexBody .hdTool .langSel .nowLang .flag {
+  width: 32px;
+  margin-right: 8px;
+}
+
+.indexBody .hdTool .langSel .nowLang .arrow {
+  width: 11px;
+  height: 7px;
+  background: url(../images/icon/sort-down.svg) no-repeat center/cover;
+}
+
+.indexBody .hdTool .langSel .langList {
+  background-color: #fff;
+  border: 1px solid #999;
+  position: absolute;
+  right: 0;
+  top: 30px;
+  z-index: 5;
+  display: none;
+}
+
+.indexBody .hdTool .langSel .langList.on {
+  display: block;
+}
+
+.indexBody .hdTool .langSel .langList .flag {
+  margin-right: 5px;
+}
+
+.indexBody .hdTool .langSel .langList li {
+  padding: 8px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  color: #000;
+}
+
+@media (any-hover: hover) {
+  .indexBody .hdTool .langSel .langList li:hover {
+    background: linear-gradient(30deg, #afafaf, #060604);
+    color: #fff;
+  }
+}
+
+.indexBody .hdTool .langSel .flag {
+  width: 32px;
+  height: 21px;
+  background: no-repeat center / cover;
+}
+
+.indexBody .hdTool .langSel .flag.cn {
+  background-image: url(../images/flag/flag_cn.jpg);
+}
+
+.indexBody .hdTool .langSel .flag.kr {
+  background-image: url(../images/flag/flag_kr.jpg);
+}
+
+.indexBody .hdTool .userBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.indexBody .hdTool .userBtn .btn {
+  min-width: 100px;
+  height: 32px;
+  padding: 0 10px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  background: linear-gradient(135deg, #966318, #b68338);
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.indexBody .hdTool .userBtn .btn:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.indexBody .hdTool .userBtn .btn + .btn {
+  margin-left: 10px;
+}
+
+.indexBody .hdMsg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.indexBody .hdMsg .userId {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.indexBody .hdMsg .userId .icon {
+  width: 35px;
+  height: 35px;
+  margin-right: 5px;
+  background: url(../images/icon/idPic.png) no-repeat center/cover;
+}
+
+.indexBody .hdMsg .userId p {
+  color: #fff;
+}
+
+.indexBody .hdMsg .myWallet {
+  margin: 0 20px;
+  color: #f3bf55;
+  position: relative;
+  font-size: 16px;
+}
+
+.indexBody .hdMsg .myWallet::before {
+  content: attr(data-coin);
+  padding-right: 3px;
+  font-size: 12px;
+}
+
+.indexBody .hdMsg .payBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.indexBody .hdMsg .payBtn .btn {
+  min-width: 80px;
+  height: 32px;
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #b68338;
+  border: 1px solid #b68338;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 32px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.indexBody .hdMsg .payBtn .btn:active {
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+  background-color: #b68338;
+  color: #0c0c0c;
+}
+
+.indexBody .hdMsg .payBtn .btn + .btn {
+  margin-left: 10px;
+}
+
+.indexBody .hdTime {
+  height: 32px;
+  line-height: 32px;
+  color: #f3bf55;
+  text-align: right;
+}
+
+.indexBody .gameCard {
+  width: 100%;
+  padding: 150px 10px 30px;
+  min-width: 1200px;
+  max-width: 1600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.indexBody .gameCard .cardBody {
+  width: 850px;
+  height: 430px;
+  background: url(../images/other/gameCard.webp) no-repeat center/cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.indexBody .gameCard .cardMsg {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.indexBody .gameCard .logo {
+  width: 220px;
+  margin-bottom: 20px;
+}
+
+.indexBody .gameCard .title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.indexBody .gameCard .line {
+  height: 8px;
+  margin: 10px 0 30px;
+}
+
+.indexBody .gameCard .btn {
+  padding: 15px;
+  border-radius: 5px;
+  border: 2px solid #5a4f36;
+  font-size: 16px;
+  color: #5a4f36;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  -webkit-box-shadow: 2px 2px 4px #000;
+          box-shadow: 2px 2px 4px #000;
+}
+
+@media (any-hover: hover) {
+  .indexBody .gameCard .btn:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    background: linear-gradient(125deg, #71561b, #bbaa82, #806122);
+    color: #fff;
+    border: 2px solid #8f6b36;
+  }
+}
+
+.indexBody .gameCard .btn:active {
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  -webkit-transform: translateY(1px) scale(1.04);
+          transform: translateY(1px) scale(1.04);
 }
 /*# sourceMappingURL=all.css.map */
