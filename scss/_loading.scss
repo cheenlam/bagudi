@@ -1,0 +1,126 @@
+.loadBody{
+    width: 100%;
+    height: 100vh;
+    background: url(../images/bg/loadBg.webp) bottom center fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    .inner{
+        padding-top: 120px;
+    }
+    .logo{
+        width: 170px;
+        margin: 0 auto 40px;
+        position: relative;
+        z-index: 2;
+    }
+    .loadTxt{
+        color: #fecc62;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        font-weight: bold;
+        -webkit-box-reflect: below -5px linear-gradient(transparent,rgba(0, 0, 0, 0.5));
+        &::before{
+            content: '[ ';
+            padding-right: 5px;
+        }
+        &::after{
+            content: ']';
+            padding-left: 5px;
+        }
+        span{
+            position: relative;
+            display: inline-block;
+            animation: jump 1.5s ease-in-out infinite;
+            animation-delay: calc(.1s*var(--i));
+        }
+    }
+    .loadPic{
+        width: 424px;
+        height: 474px;
+        // background: url(../test.png) no-repeat center/cover;
+        position: relative;
+        transform: translateY(-180px);
+        .light{
+            width: 100%;
+            animation: flicker 2s infinite linear;
+            transform-origin: top center;    
+        }
+        .backCard{
+            width: 60%;
+            margin: auto;
+            position: absolute;
+            top: 43%;
+            left: 0;
+            right: 0;
+            animation: zoom 3s linear infinite;
+        }
+        .dice{
+            position: absolute;
+            animation: rotate infinite linear;
+        }
+        .d1{
+            width: 11%;
+            @include pos(tl,68%,21%);
+            animation-duration: 1.5s;
+        }
+        .d2{
+            width: 16%;
+            @include pos(tl,48%,40%);
+            animation-duration: 3s;
+        }
+        .d3{
+            width: 9%;
+            @include pos(tr,69%,37%);
+            animation-duration: 2s;
+        }
+        .d4{
+            width: 14%;
+            @include pos(tr,56%,16%);
+            animation-duration: 2.5s;
+        }
+    }
+}
+
+@keyframes jump {
+    0%,40%,100%{
+        transform: translateY(0);
+        color: #fecc62;
+    }
+    20%{
+        transform: translateY(-10px);
+        color: #fff;
+    }
+}
+
+@keyframes flicker{
+    0%,100%{
+        opacity: .5;
+    }
+    50%{
+        opacity: 1;
+    }
+}
+
+@keyframes rotate{
+    0%,50%,100%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(-30deg); 
+    }
+    75%{
+        transform: rotate(30deg);
+    }
+}
+
+@keyframes zoom{
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.95);
+    }
+}

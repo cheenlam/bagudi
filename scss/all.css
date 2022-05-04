@@ -109,29 +109,42 @@ img {
 
 .loginBox {
   width: 100%;
-  height: 100vh;
-  background: url(../images/bg/loginBg.webp) no-repeat center top/cover;
+  max-width: 1600px;
+  padding: 0 15px 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  overflow: auto;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .loginBox .innerBox {
-  width: 300px;
-  padding: 100px 10px 0;
+  width: 500px;
+  padding: 40px 50px 80px;
+  margin: 100px 50px 0 0;
+  border-radius: 5px;
+  border: 2px solid rgba(42, 42, 42, 0.9);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(60%, rgba(4, 4, 4, 0.7)), to(rgba(100, 100, 100, 0.7)));
+  background: linear-gradient(0deg, rgba(4, 4, 4, 0.7) 60%, rgba(100, 100, 100, 0.7));
+}
+
+@media screen and (max-width: 660px) {
+  .loginBox .innerBox {
+    margin: 100px auto 0;
+  }
 }
 
 .loginBox .innerBox .logo {
-  width: 50%;
-  margin: 0 auto 30px;
+  width: 120px;
+  margin: 0 auto 60px;
 }
 
 .loginBox .innerBox .iptBox {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .loginBox .innerBox .iptBox .list {
@@ -140,9 +153,6 @@ img {
 
 .loginBox .innerBox .iptBox .list li {
   height: 43px;
-  padding: 0 10px 0 15px;
-  border-radius: 43px;
-  background-color: #c8cbd4;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -155,16 +165,19 @@ img {
 .loginBox .innerBox .iptBox .list li label {
   width: 100%;
   height: 100%;
+  padding-right: 5px;
+  margin-left: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-bottom: 1px solid #fff;
 }
 
 .loginBox .innerBox .iptBox .list li + li {
-  margin-top: 12px;
+  margin-top: 10px;
 }
 
 .loginBox .innerBox .iptBox .list input {
@@ -172,9 +185,9 @@ img {
   background: transparent;
   outline: none;
   border: none;
-  padding: 0 10px;
+  padding: 0 10px 0 20px;
   font-size: 15px;
-  color: #2c2f3a;
+  color: #fff;
 }
 
 .loginBox .innerBox .iptBox .list .icon {
@@ -198,8 +211,8 @@ img {
 }
 
 .loginBox .innerBox .iptBox .list .icon.eye {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   background-image: url(../images/icon/eye_off.svg);
   cursor: pointer;
 }
@@ -214,13 +227,13 @@ img {
   border-radius: 5px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  background-color: #d22b25;
+  background-color: #535353;
   color: #fff;
   cursor: pointer;
 }
 
 .loginBox .innerBox .iptBox .tool {
-  padding: 0 10px;
+  padding: 0 5px 0 30px;
   color: #eee;
   font-size: 12px;
   display: -webkit-box;
@@ -271,12 +284,12 @@ img {
   font-size: 18px;
   letter-spacing: 1px;
   font-weight: bold;
-  background: linear-gradient(135deg, #90e8f8, #0261fc);
+  background: linear-gradient(135deg, #b68338, #966318);
   cursor: pointer;
 }
 
 .loginBox .innerBox .submitBox .tool {
-  padding-top: 10px;
+  padding-top: 25px;
   color: #eee;
   font-size: 12px;
 }
@@ -755,5 +768,1225 @@ body::-webkit-scrollbar {
   top: 20vh;
   right: 20px;
   cursor: pointer;
+}
+
+.regBox {
+  width: 100%;
+  max-width: 1600px;
+  padding: 0 15px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.regBox .innerBox {
+  width: 500px;
+  padding: 40px 50px 80px;
+  margin: 100px 50px 0 0;
+  border-radius: 5px;
+  border: 2px solid rgba(42, 42, 42, 0.9);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(60%, rgba(4, 4, 4, 0.7)), to(rgba(100, 100, 100, 0.7)));
+  background: linear-gradient(0deg, rgba(4, 4, 4, 0.7) 60%, rgba(100, 100, 100, 0.7));
+}
+
+@media screen and (max-width: 660px) {
+  .regBox .innerBox {
+    margin: 100px auto 0;
+  }
+}
+
+.regBox .innerBox .logo {
+  width: 120px;
+  margin: 0 auto 60px;
+  position: relative;
+}
+
+.regBox .innerBox .iptBox .list {
+  margin-bottom: 40px;
+}
+
+.regBox .innerBox .iptBox .list li .item {
+  height: 43px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.regBox .innerBox .iptBox .list li .item.pwd input {
+  width: calc(100% - 40px);
+}
+
+.regBox .innerBox .iptBox .list li label {
+  width: 100%;
+  margin-left: 10px;
+  padding: 0 10px 8px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #fff;
+}
+
+.regBox .innerBox .iptBox .list li + li {
+  margin-top: 10px;
+}
+
+.regBox .innerBox .iptBox .list input {
+  width: 100%;
+  background: transparent;
+  outline: none;
+  border: none;
+  padding: 0 10px;
+  font-size: 15px;
+  color: #fff;
+}
+
+.regBox .innerBox .iptBox .list .icon {
+  width: 22px;
+  height: 22px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background: no-repeat center;
+}
+
+.regBox .innerBox .iptBox .list .icon.user {
+  background-image: url(../images/icon/idCard.svg);
+}
+
+.regBox .innerBox .iptBox .list .icon.pwd {
+  background-image: url(../images/icon/key.svg);
+}
+
+.regBox .innerBox .iptBox .list .icon.phone {
+  background-image: url(../images/icon/phone.svg);
+}
+
+.regBox .innerBox .iptBox .list .icon.check {
+  background-image: url(../images/icon/check.svg);
+}
+
+.regBox .innerBox .iptBox .list .icon.portrait {
+  background-image: url(../images/icon/portrait.svg);
+}
+
+.regBox .innerBox .iptBox .list .icon.verify {
+  background-image: url(../images/icon/shield.svg);
+}
+
+.regBox .innerBox .iptBox .list .icon.eye {
+  width: 18px;
+  height: 18px;
+  background-image: url(../images/icon/eye_off.svg);
+  cursor: pointer;
+}
+
+.regBox .innerBox .iptBox .list .icon.eye.on {
+  background-image: url(../images/icon/eye_on.svg);
+}
+
+.regBox .innerBox .iptBox .list .errorTxt {
+  font-size: 12px;
+  line-height: 16px;
+  color: #eeba50;
+  text-align: right;
+}
+
+.regBox .innerBox .iptBox .iptTool {
+  padding: 20px 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.regBox .innerBox .iptBox .iptTool .ckBox {
+  margin-bottom: 10px;
+  color: #eee;
+  font-size: 13px;
+}
+
+.regBox .innerBox .iptBox .iptTool .ckBox label {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.regBox .innerBox .iptBox .iptTool .ckBox input {
+  display: none;
+}
+
+.regBox .innerBox .iptBox .iptTool .ckBox .icon {
+  width: 22px;
+  height: 22px;
+  margin-left: 3px;
+  background: url(../images/icon/ckBox_off.svg) no-repeat center top/cover;
+}
+
+.regBox .innerBox .iptBox .iptTool .ckBox input:checked + .icon {
+  background-image: url(../images/icon/ckBox_on.svg);
+}
+
+.regBox .innerBox .iptBox .iptTool .ckBox a {
+  color: #eb3b35;
+}
+
+.regBox .innerBox .iptBox .iptTool .submitBox {
+  width: 100%;
+}
+
+.regBox .innerBox .iptBox .iptTool .submitBox button {
+  background: transparent;
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 45px;
+  border-radius: 45px;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #b68338, #966318);
+  cursor: pointer;
+}
+
+.regBox .innerBox .iptBox .iptTool .submitBox .tool {
+  width: 100%;
+  padding-top: 10px;
+  color: #eee;
+  font-size: 12px;
+}
+
+.regBox .innerBox .iptBox .iptTool .submitBox .tool ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.regBox .innerBox .iptBox .iptTool .submitBox .tool li {
+  position: relative;
+}
+
+.regBox .innerBox .iptBox .iptTool .submitBox .tool li + li {
+  margin-left: 20px;
+}
+
+.regBox .innerBox .iptBox .iptTool .submitBox .tool li + li::before {
+  content: "|";
+  position: absolute;
+  top: 0;
+  left: -10px;
+}
+
+.mbrBox {
+  min-width: 1280px;
+}
+
+.mbrBody {
+  background: #000 url(../images/bg/mbrBg.webp) no-repeat 50% 30%/1920px auto;
+}
+
+.mbrBody .inner {
+  max-width: 1280px;
+  padding: 20px 10px 100px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mbrBody .mbrMenu {
+  width: 220px;
+  padding: 20px 0 80px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  color: #fff;
+  background: -webkit-gradient(linear, left bottom, left top, from(#b68141), to(#302517));
+  background: linear-gradient(0deg, #b68141, #302517);
+}
+
+.mbrBody .mbrMenu li {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10px 0 40px;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.mbrBody .mbrMenu li.on {
+  background: -webkit-gradient(linear, left top, right top, from(#9d7649), color-stop(24%, #ca9934), color-stop(51%, #fdc860), color-stop(95%, #ca9934), color-stop(98%, #fdc860), to(#9d7649));
+  background: linear-gradient(90deg, #9d7649, #ca9934 24%, #fdc860 51%, #ca9934 95%, #fdc860 98%, #9d7649);
+  -webkit-box-shadow: 0 0 4px #000;
+          box-shadow: 0 0 4px #000;
+}
+
+.mbrBody .mbrMenu li.on::before {
+  opacity: 1;
+}
+
+@media (any-hover: hover) {
+  .mbrBody .mbrMenu li:hover {
+    background: -webkit-gradient(linear, left top, right top, from(#9d7649), color-stop(24%, #ca9934), color-stop(51%, #fdc860), color-stop(95%, #ca9934), color-stop(98%, #fdc860), to(#9d7649));
+    background: linear-gradient(90deg, #9d7649, #ca9934 24%, #fdc860 51%, #ca9934 95%, #fdc860 98%, #9d7649);
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+    z-index: 2;
+  }
+  .mbrBody .mbrMenu li:hover::before {
+    opacity: 1;
+  }
+}
+
+.mbrBody .mbrMenu li::before {
+  content: "";
+  width: 14px;
+  height: 100%;
+  background-color: #81511c;
+  position: absolute;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-box-shadow: 1px 0 4px #3a230a;
+          box-shadow: 1px 0 4px #3a230a;
+  opacity: 0;
+}
+
+.mbrBody .mbrCnt {
+  width: 100%;
+  margin-left: 20px;
+}
+
+.mbrBody .sortSel {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.mbrBody .sortSel .surplus {
+  margin-bottom: 20px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 15px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.mbrBody .sortSel .surplus p {
+  padding-left: 15px;
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.mbrBody .sortSel .surplus p::before {
+  content: attr(data-currency);
+  padding-right: 3px;
+  font-size: 15px;
+}
+
+.mbrBody .sortSel .selBox ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mbrBody .sortSel .selBox li {
+  min-width: 180px;
+  padding: 10px;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #bfbfbf;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.mbrBody .sortSel .selBox li.on {
+  background-color: #6c5832;
+}
+
+@media (any-hover: hover) {
+  .mbrBody .sortSel .selBox li:hover {
+    background-color: #6c5832;
+  }
+}
+
+.mbrBody .sortSel .selBox li:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.mbrBody .sortSel .selBox li + li {
+  margin-left: 15px;
+}
+
+.mbrBody .sortSel .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background: no-repeat center/cover;
+}
+
+.mbrBody .sortSel .icon.deposit {
+  background-image: url(../images/icon/deposit_w.svg);
+}
+
+.mbrBody .sortSel .icon.transfer {
+  background-image: url(../images/icon/transfer_w.svg);
+}
+
+.mbrBody .sortSel .icon.withdraw {
+  background-image: url(../images/icon/withdraw_w.svg);
+}
+
+.mbrBody .divTitle {
+  padding-bottom: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #d09e37;
+}
+
+.mbrBody .selList ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mbrBody .selList li {
+  height: 40px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 1px solid #e5e5e5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.mbrBody .selList li::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(../images/icon/btnTag.png) no-repeat center/cover;
+  position: absolute;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: none;
+}
+
+.mbrBody .selList li.on {
+  border: 1px solid #d2b79c;
+  color: #d2b79c;
+}
+
+.mbrBody .selList li.on::before {
+  display: block;
+}
+
+.mbrBody .selList li + li {
+  margin-left: 10px;
+}
+
+.mbrBody .selChange {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mbrBody .selChange .chBtn {
+  width: 35px;
+  height: 35px;
+  margin: 0 10px;
+  background: url(../images/icon/forward.svg) no-repeat center/cover;
+  cursor: pointer;
+}
+
+.mbrBody .selChange input {
+  min-width: 350px;
+}
+
+.mbrBody .iptSp.hasTag {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mbrBody .iptSp.hasTag .tag {
+  margin-left: 20px;
+  padding: 3px 20px;
+  border-radius: 40px;
+  background-color: #352a1d;
+  color: #fff;
+  font-size: 12px;
+}
+
+.mbrBody .iptSp.hasTag input {
+  width: 250px;
+}
+
+.mbrBody .iptSp.hasBtn {
+  width: 350px;
+  position: relative;
+}
+
+.mbrBody .iptSp.hasBtn input {
+  background: transparent;
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 0 80px 0 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+}
+
+.mbrBody .iptSp.hasBtn input:focus {
+  border: 1px solid #f00;
+}
+
+.mbrBody .iptSp.hasBtn .maxAmount {
+  height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #b68338;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  cursor: pointer;
+  position: absolute;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mbrBody .submitBtn {
+  background: transparent;
+  outline: none;
+  border: none;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  height: 45px;
+  padding: 0 20px;
+  border-radius: 45px;
+  font-size: 16px;
+  font-weight: bold;
+  background: linear-gradient(120deg, #966318, #b68338);
+  -webkit-box-shadow: 2px 2px 4px #54360a;
+          box-shadow: 2px 2px 4px #54360a;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mbrBody .submitBtn.trn {
+  border: 1px solid #d09e37;
+  background: transparent;
+  color: #d09e37;
+}
+
+.mbrBody .submitBtn:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+
+.mbrBody .itemList .item + .item {
+  margin-top: 20px;
+}
+
+.mbrBody select {
+  min-width: 350px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #e5e5e5;
+}
+
+.mbrBody select:focus {
+  border: 1px solid #f00;
+}
+
+.mbrBody input {
+  background: transparent;
+  outline: none;
+  border: none;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+}
+
+.mbrBody input:focus {
+  border: 1px solid #f00;
+}
+
+.mbrBody input::-webkit-input-placeholder {
+  font-size: 13px;
+}
+
+.mbrBody input:-ms-input-placeholder {
+  font-size: 13px;
+}
+
+.mbrBody input::-ms-input-placeholder {
+  font-size: 13px;
+}
+
+.mbrBody input::placeholder {
+  font-size: 13px;
+}
+
+.mbrBody .inforBox {
+  padding: 0 20px 40px;
+  background-color: #fff;
+}
+
+.mbrBody .inforBox input,
+.mbrBody .inforBox .selList {
+  width: 320px;
+}
+
+.mbrBody .inforBox .iptTitle {
+  width: 80px;
+  padding-right: 15px;
+  font-size: 14px;
+  text-align: right;
+}
+
+.mbrBody .inforBox .itemList .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mbrBody .inforBox .msgDiv {
+  padding: 30px 30px 50px;
+}
+
+.mbrBody .inforBox .bankDiv {
+  padding: 30px 30px 50px;
+  background-color: #eee;
+  border-radius: 10px;
+}
+
+.mbrBody .inforBox .bankDiv input {
+  background-color: #fff;
+}
+
+.mbrBody .inforBox .inforTool {
+  padding-left: 30px;
+  display: inline-block;
+}
+
+.mbrBody .inforBox .regTime {
+  padding: 20px 40px;
+  font-size: 15px;
+}
+
+.mbrBody .inforBox .regTime span {
+  padding-left: 8px;
+  color: #b68338;
+}
+
+.mbrBody .inforBox .submitBtn {
+  width: 100%;
+}
+
+.mbrBody .strongBox .selBank,
+.mbrBody .strongBox .depositAmount,
+.mbrBody .strongBox .transferBox {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.mbrBody .strongBox .selList {
+  width: 750px;
+}
+
+.mbrBody .strongBox .selBank {
+  margin-bottom: 20px;
+}
+
+.mbrBody .strongBox .sortSel .surplus {
+  background-color: #352a1d;
+}
+
+.mbrBody .strongBox .submitBtn {
+  min-width: 285px;
+}
+
+.mbrBody .walletBox .sortSel .surplus {
+  background-color: #d09e37;
+}
+
+.mbrBody .walletBox .selBank,
+.mbrBody .walletBox .depositAmount,
+.mbrBody .walletBox .transferBox,
+.mbrBody .walletBox .withdrawIpt {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.mbrBody .walletBox .selBank {
+  margin-bottom: 20px;
+}
+
+.mbrBody .walletBox .selList {
+  width: 750px;
+}
+
+.mbrBody .walletBox .submitBtn {
+  min-width: 285px;
+}
+
+.mbrBody .walletBox .cardMsg {
+  padding: 20px 0;
+}
+
+.mbrBody .walletBox .cardMsg li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #b68338;
+}
+
+.mbrBody .walletBox .cardMsg li + li {
+  margin-top: 8px;
+}
+
+.mbrBody .walletBox .cardMsg .cardTitle {
+  width: 100px;
+  margin-right: 30px;
+  text-align: right;
+}
+
+.mbrBody .walletBox .withdrawIpt .available {
+  margin-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.mbrBody .walletBox .withdrawIpt .available p {
+  margin-left: 20px;
+  color: #d09e37;
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.mbrBody .walletBox .withdrawIpt .available p::before {
+  content: attr(data-coin);
+  padding-right: 4px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.mbrBody .walletBox .withdrawIpt .itemList p {
+  padding-bottom: 5px;
+}
+
+.mbrBody .walletBox .withdrawIpt .itemList input {
+  width: 320px;
+}
+
+.mbrBody .historyBox .toolBox,
+.mbrBody .historyBox .historyList {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.mbrBody .historyBox .toolBox {
+  margin-bottom: 20px;
+}
+
+.mbrBody .historyBox .toolBox .divTitle p {
+  padding-top: 5px;
+  font-size: 14px;
+  color: #a0a0a0;
+}
+
+.mbrBody .historyBox .toolBox .itemList .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mbrBody .historyBox .toolBox .itemList .item .title {
+  width: 60px;
+  padding-right: 10px;
+  text-align: right;
+}
+
+.mbrBody .historyBox .toolBox input,
+.mbrBody .historyBox .toolBox select {
+  min-width: 230px;
+}
+
+.mbrBody .historyBox .toolBox .dateIpt span {
+  padding: 0 5px;
+}
+
+.mbrBody .historyBox .toolBox .dateSel {
+  width: 350px;
+  margin-left: 15px;
+}
+
+.mbrBody .historyBox .toolBox .dateSel ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mbrBody .historyBox .toolBox .dateSel li {
+  height: 40px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 14px;
+  border: 1px solid #e5e5e5;
+  color: #aaa;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.mbrBody .historyBox .toolBox .dateSel li.on {
+  border: 1px solid #d09e37;
+  color: #d09e37;
+}
+
+.mbrBody .historyBox .toolBox .dateSel li + li {
+  margin-left: 5px;
+}
+
+.mbrBody .historyBox .toolBox .submitBtn {
+  width: 200px;
+}
+
+.mbrBody .historyBox .toolBox .submitBtn + .submitBtn {
+  margin-left: 15px;
+}
+
+.mbrBody .historyBox .historyList .msgTitle {
+  padding: 15px 20px;
+  background-color: #f1e6d9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mbrBody .historyBox .historyList .msgTitle .icon {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  background: url(../images/icon/note.svg) no-repeat center/cover;
+}
+
+.mbrBody .historyBox .historyList .msgTitle .msg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+}
+
+.mbrBody .historyBox .historyList .msgTitle p + p {
+  margin-left: 20px;
+}
+
+.mbrBody .historyBox .historyList .msgTitle span {
+  padding: 0 5px;
+}
+
+.mbrBody .historyBox .historyList .list {
+  padding: 20px 0 60px;
+  min-height: 300px;
+}
+
+.mbrBody .historyBox .historyList .list table {
+  width: 100%;
+  font-size: 14px;
+}
+
+.mbrBody .historyBox .historyList .list tr:nth-child(odd) {
+  background-color: #f4f6f9;
+}
+
+.mbrBody .historyBox .historyList .list th, .mbrBody .historyBox .historyList .list td {
+  height: 40px;
+  padding: 10px 5px;
+}
+
+.mbrBody .historyBox .historyList .list th {
+  background-color: #d09e37;
+  color: #fff;
+  font-weight: bold;
+}
+
+.mbrBody .historyBox .historyList .list td {
+  color: #666;
+  text-align: center;
+}
+
+.mbrBody .historyBox .historyList .list td.left {
+  text-align: left;
+}
+
+.mbrBody .historyBox .historyList .list .noList {
+  margin: 80px auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mbrBody .historyBox .historyList .list .noList .icon {
+  width: 50px;
+  margin-bottom: 5px;
+}
+
+.mbrBody .historyBox .historyList .list .noList p {
+  color: #949eae;
+  font-size: 14px;
+}
+
+.loadBody {
+  width: 100%;
+  height: 100vh;
+  background: url(../images/bg/loadBg.webp) bottom center fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow-y: auto;
+}
+
+.loadBody .inner {
+  padding-top: 120px;
+}
+
+.loadBody .logo {
+  width: 170px;
+  margin: 0 auto 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.loadBody .loadTxt {
+  color: #fecc62;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  font-weight: bold;
+  -webkit-box-reflect: below -5px linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+}
+
+.loadBody .loadTxt::before {
+  content: '[ ';
+  padding-right: 5px;
+}
+
+.loadBody .loadTxt::after {
+  content: ']';
+  padding-left: 5px;
+}
+
+.loadBody .loadTxt span {
+  position: relative;
+  display: inline-block;
+  -webkit-animation: jump 1.5s ease-in-out infinite;
+          animation: jump 1.5s ease-in-out infinite;
+  -webkit-animation-delay: calc(.1s*var(--i));
+          animation-delay: calc(.1s*var(--i));
+}
+
+.loadBody .loadPic {
+  width: 424px;
+  height: 474px;
+  position: relative;
+  -webkit-transform: translateY(-180px);
+          transform: translateY(-180px);
+}
+
+.loadBody .loadPic .light {
+  width: 100%;
+  -webkit-animation: flicker 2s infinite linear;
+          animation: flicker 2s infinite linear;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+}
+
+.loadBody .loadPic .backCard {
+  width: 60%;
+  margin: auto;
+  position: absolute;
+  top: 43%;
+  left: 0;
+  right: 0;
+  -webkit-animation: zoom 3s linear infinite;
+          animation: zoom 3s linear infinite;
+}
+
+.loadBody .loadPic .dice {
+  position: absolute;
+  -webkit-animation: rotate infinite linear;
+          animation: rotate infinite linear;
+}
+
+.loadBody .loadPic .d1 {
+  width: 11%;
+  position: absolute;
+  top: 68%;
+  left: 21%;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+.loadBody .loadPic .d2 {
+  width: 16%;
+  position: absolute;
+  top: 48%;
+  left: 40%;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+.loadBody .loadPic .d3 {
+  width: 9%;
+  position: absolute;
+  top: 69%;
+  right: 37%;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.loadBody .loadPic .d4 {
+  width: 14%;
+  position: absolute;
+  top: 56%;
+  right: 16%;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+}
+
+@-webkit-keyframes jump {
+  0%, 40%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    color: #fecc62;
+  }
+  20% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    color: #fff;
+  }
+}
+
+@keyframes jump {
+  0%, 40%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    color: #fecc62;
+  }
+  20% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    color: #fff;
+  }
+}
+
+@-webkit-keyframes flicker {
+  0%, 100% {
+    opacity: .5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes flicker {
+  0%, 100% {
+    opacity: .5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes rotate {
+  0%, 50%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+  75% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+}
+
+@keyframes rotate {
+  0%, 50%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+  75% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+}
+
+@-webkit-keyframes zoom {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+}
+
+@keyframes zoom {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
 }
 /*# sourceMappingURL=all.css.map */

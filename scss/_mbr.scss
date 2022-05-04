@@ -1,0 +1,603 @@
+.mbrBox {
+    min-width: 1280px;
+    @at-root .mbrBody {
+        background: #000 url(../images/bg/mbrBg.webp) no-repeat 50% 30%/ 1920px auto;
+        .inner {
+            max-width: 1280px;
+            padding: 20px 10px 100px;
+            margin: auto;
+            display: flex;
+        }
+        .mbrMenu {
+            width: 220px;
+            padding: 20px 0 80px;
+            flex-shrink: 0;
+            color: #fff;
+            background: linear-gradient(0deg, #b68141, #302517);
+            li {
+                height: 50px;
+                display: flex;
+                align-items: center;
+                padding: 0 10px 0 40px;
+                position: relative;
+                cursor: pointer;
+                transition: 0.5s;
+                &.on {
+                    background: linear-gradient(
+                        90deg,
+                        #9d7649,
+                        #ca9934 24%,
+                        #fdc860 51%,
+                        #ca9934 95%,
+                        #fdc860 98%,
+                        #9d7649
+                    );
+                    box-shadow: 0 0 4px #000;
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+                @include hover {
+                    &:hover {
+                        background: linear-gradient(
+                            90deg,
+                            #9d7649,
+                            #ca9934 24%,
+                            #fdc860 51%,
+                            #ca9934 95%,
+                            #fdc860 98%,
+                            #9d7649
+                        );
+                        box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+                        z-index: 2;
+                        &::before {
+                            opacity: 1;
+                        }
+                    }
+                }
+                &::before {
+                    content: "";
+                    width: 14px;
+                    height: 100%;
+                    background-color: #81511c;
+                    position: absolute;
+                    @include pos(tl, 0);
+                    box-shadow: 1px 0 4px #3a230a;
+                    opacity: 0;
+                }
+            }
+        }
+        .mbrCnt {
+            width: 100%;
+            margin-left: 20px;
+        }
+
+        // 類別選擇
+        .sortSel {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #fff;
+            .surplus {
+                margin-bottom: 20px;
+                padding: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 15px;
+                color: #fff;
+                border-radius: 10px;
+                p {
+                    padding-left: 15px;
+                    position: relative;
+                    font-size: 20px;
+                    font-weight: bold;
+                    &::before {
+                        content: attr(data-currency);
+                        padding-right: 3px;
+                        font-size: 15px;
+                    }
+                }
+            }
+            .selBox {
+                ul {
+                    display: flex;
+                }
+                li {
+                    min-width: 180px;
+                    padding: 10px;
+                    font-size: 18px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #bfbfbf;
+                    color: #fff;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: 0.5s;
+                    &.on {
+                        background-color: #6c5832;
+                    }
+                    @include hover {
+                        &:hover {
+                            background-color: #6c5832;
+                        }
+                    }
+                    &:active {
+                        transform: translateY(2px);
+                    }
+                }
+                li + li {
+                    margin-left: 15px;
+                }
+            }
+            .icon {
+                width: 24px;
+                height: 24px;
+                margin-right: 8px;
+                flex-shrink: 0;
+                background: no-repeat center/cover;
+                &.deposit {
+                    background-image: url(../images/icon/deposit_w.svg);
+                }
+                &.transfer {
+                    background-image: url(../images/icon/transfer_w.svg);
+                }
+                &.withdraw {
+                    background-image: url(../images/icon/withdraw_w.svg);
+                }
+            }
+        }
+        // 區塊標題
+        .divTitle {
+            padding-bottom: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #d09e37;
+        }
+        // 清單選擇
+        .selList {
+            ul {
+                display: flex;
+            }
+            li {
+                height: 40px;
+                flex: 1;
+                border: 1px solid #e5e5e5;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 5px;
+                font-size: 14px;
+                font-weight: bold;
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+                &::before {
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    background: url(../images/icon/btnTag.png) no-repeat center / cover;
+                    position: absolute;
+                    @include pos(br, 0);
+                    display: none;
+                }
+                &.on {
+                    border: 1px solid #d2b79c;
+                    color: #d2b79c;
+                    &::before {
+                        display: block;
+                    }
+                }
+            }
+            li + li {
+                margin-left: 10px;
+            }
+        }
+        // 變更選擇
+        .selChange {
+            display: flex;
+            .chBtn {
+                width: 35px;
+                height: 35px;
+                margin: 0 10px;
+                background: url(../images/icon/forward.svg) no-repeat center / cover;
+                cursor: pointer;
+            }
+            input {
+                min-width: 350px;
+            }
+        }
+
+        // 特殊輸入框
+        .iptSp {
+            &.hasTag {
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                .tag {
+                    margin-left: 20px;
+                    padding: 3px 20px;
+                    border-radius: 40px;
+                    background-color: #352a1d;
+                    color: #fff;
+                    font-size: 12px;
+                }
+                input {
+                    width: 250px;
+                }
+            }
+            &.hasBtn {
+                width: 350px;
+                position: relative;
+                input {
+                    @include fullNone;
+                    width: 100%;
+                    height: 40px;
+                    margin-bottom: 20px;
+                    padding: 0 80px 0 10px;
+                    border: 1px solid #e5e5e5;
+                    border-radius: 5px;
+                    &:focus {
+                        border: 1px solid #f00;
+                    }
+                }
+                .maxAmount {
+                    height: 40px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: #b68338;
+                    flex-shrink: 0;
+                    cursor: pointer;
+                    position: absolute;
+                    @include pos(tr, 0, 10px);
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+        // 送出按鈕
+        .submitBtn {
+            @include fullNone;
+            flex-shrink: 0;
+            height: 45px;
+            padding: 0 20px;
+            border-radius: 45px;
+            font-size: 16px;
+            font-weight: bold;
+            background: linear-gradient(120deg, #966318, #b68338);
+            box-shadow: 2px 2px 4px #54360a;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &.trn {
+                border: 1px solid #d09e37;
+                background: transparent;
+                color: #d09e37;
+            }
+            &:active {
+                transform: translateY(2px);
+                box-shadow: unset;
+            }
+        }
+
+        .itemList {
+            .item + .item {
+                margin-top: 20px;
+            }
+        }
+
+        select {
+            min-width: 350px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #e5e5e5;
+            &:focus {
+                border: 1px solid #f00;
+            }
+        }
+
+        input {
+            @include fullNone;
+            height: 40px;
+            padding: 0 10px;
+            border: 1px solid #e5e5e5;
+            border-radius: 5px;
+            &:focus {
+                border: 1px solid #f00;
+            }
+            &::placeholder {
+                font-size: 13px;
+            }
+        }
+        // =================================
+        // 個人資料
+        .inforBox {
+            padding: 0 20px 40px;
+            background-color: #fff;
+            input,
+            .selList {
+                width: 320px;
+            }
+            .iptTitle {
+                width: 80px;
+                padding-right: 15px;
+                font-size: 14px;
+                text-align: right;
+            }
+            .itemList {
+                .item {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+            .msgDiv {
+                padding: 30px 30px 50px;
+            }
+            .bankDiv {
+                padding: 30px 30px 50px;
+                background-color: #eee;
+                border-radius: 10px;
+                input {
+                    background-color: #fff;
+                }
+            }
+            .inforTool {
+                padding-left: 30px;
+                display: inline-block;
+            }
+            .regTime {
+                padding: 20px 40px;
+                font-size: 15px;
+                span {
+                    padding-left: 8px;
+                    color: #b68338;
+                }
+            }
+            .submitBtn {
+                width: 100%;
+            }
+        }
+
+        // 保險櫃
+        .strongBox {
+            .selBank,
+            .depositAmount,
+            .transferBox {
+                padding: 20px;
+                border-radius: 5px;
+                background-color: #fff;
+            }
+            .selList {
+                width: 750px;
+            }
+            .selBank {
+                margin-bottom: 20px;
+            }
+
+            .sortSel {
+                .surplus {
+                    background-color: #352a1d;
+                }
+            }
+
+            .submitBtn {
+                min-width: 285px;
+            }
+        }
+
+        // 一般錢包
+        .walletBox {
+            .sortSel {
+                .surplus {
+                    background-color: #d09e37;
+                }
+            }
+            .selBank,
+            .depositAmount,
+            .transferBox,
+            .withdrawIpt {
+                padding: 20px;
+                background-color: #fff;
+            }
+            .selBank {
+                margin-bottom: 20px;
+            }
+            .selList {
+                width: 750px;
+            }
+            .submitBtn {
+                min-width: 285px;
+            }
+            .cardMsg {
+                padding: 20px 0;
+                li {
+                    display: flex;
+                    align-items: center;
+                    color: #b68338;
+                }
+                li + li {
+                    margin-top: 8px;
+                }
+                .cardTitle {
+                    width: 100px;
+                    margin-right: 30px;
+                    text-align: right;
+                }
+            }
+            .withdrawIpt {
+                .available {
+                    margin-bottom: 25px;
+                    display: flex;
+                    align-items: flex-end;
+                    p {
+                        margin-left: 20px;
+                        color: #d09e37;
+                        position: relative;
+                        font-size: 20px;
+                        font-weight: bold;
+                        &::before {
+                            content: attr(data-coin);
+                            padding-right: 4px;
+                            font-size: 14px;
+                            font-weight: normal;
+                        }
+                    }
+                }
+                .itemList {
+                    p {
+                        padding-bottom: 5px;
+                    }
+                    input {
+                        width: 320px;
+                    }
+                }
+            }
+        }
+
+        // 下注紀錄
+        .historyBox {
+            .toolBox,
+            .historyList {
+                padding: 20px;
+                background-color: #fff;
+            }
+
+            .toolBox {
+                margin-bottom: 20px;
+                .divTitle {
+                    p {
+                        padding-top: 5px;
+                        font-size: 14px;
+                        color: #a0a0a0;
+                    }
+                }
+                .itemList {
+                    .item {
+                        display: flex;
+                        align-items: center;
+                        .title {
+                            width: 60px;
+                            padding-right: 10px;
+                            text-align: right;
+                        }
+                    }
+                }
+                input,
+                select {
+                    min-width: 230px;
+                }
+                .dateIpt {
+                    span {
+                        padding: 0 5px;
+                    }
+                }
+                .dateSel {
+                    width: 350px;
+                    margin-left: 15px;
+                    ul {
+                        display: flex;
+                    }
+                    li {
+                        height: 40px;
+                        flex: 1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 14px;
+                        border: 1px solid #e5e5e5;
+                        color: #aaa;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        font-weight: bold;
+                        &.on {
+                            border: 1px solid #d09e37;
+                            color: #d09e37;
+                        }
+                    }
+                    li + li {
+                        margin-left: 5px;
+                    }
+                }
+                .submitBtn {
+                    width: 200px;
+                }
+                .submitBtn + .submitBtn {
+                    margin-left: 15px;
+                }
+            }
+
+            .historyList {
+                .msgTitle {
+                    padding: 15px 20px;
+                    background-color: #f1e6d9;
+                    display: flex;
+                    align-items: center;
+                    .icon {
+                        width: 15px;
+                        height: 15px;
+                        margin-right: 5px;
+                        background: url(../images/icon/note.svg) no-repeat center / cover;
+                    }
+                    .msg{
+                        display: flex;
+                        font-size: 14px;
+                    }
+                    p+p{
+                        margin-left: 20px;
+                    }
+                    span{
+                        padding: 0 5px;
+                    }
+                }
+                .list{
+                    padding: 20px 0 60px;
+                    min-height: 300px;
+                    table{
+                        width: 100%;
+                        font-size: 14px;
+                    }
+                    tr{
+                        &:nth-child(odd){
+                            background-color: #f4f6f9;
+                        }
+                    }
+                    th,td{
+                        height: 40px;
+                        padding: 10px 5px;
+                    }
+                    th{
+                        background-color: #d09e37;
+                        color: #fff;
+                        font-weight: bold;
+                    }
+                    td{
+                        color: #666;
+                        text-align: center;    
+                        &.left{
+                            text-align: left;
+                        }        
+                    }
+                    .noList{         
+                        margin: 80px auto 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        .icon{
+                            width: 50px;
+                            margin-bottom: 5px;
+                        }
+                        p {
+                            color: #949eae;
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

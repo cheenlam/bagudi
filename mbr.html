@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/all.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mbrBox">
+        <!-- === hdBox start === -->
+        <div class="hdBox">
+            <div class="inner">
+                <div class="logo">
+                    <img src="./images/logo/gold.webp" alt="">
+                </div>
+                <div class="hdMain">
+                    <div class="tool">
+                        <div class="time">wed Apr 06 2022 16:12:05 GMT+0800</div>
+                        <div class="userOp">
+                            <div class="btn login">歡迎登入</div>
+                            <div class="btn register">免費註冊</div>
+                        </div>
+                        <div class="langSel">
+                            <div class="nowLang">
+                                <div class="flag cn"></div>
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="langList">
+                                <ul>
+                                    <li >
+                                        <div class="flag cn"></div>
+                                        <p>CN</p>
+                                    </li>
+                                    <li class="on">
+                                        <div class="flag kr"></div>
+                                        <p>KR</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="">體育賽事</a></li>
+                            <li><a href="">真人娛樂</a></li>
+                            <li><a href="">棋牌遊戲</a></li>
+                            <li><a href="">電競遊戲</a></li>
+                            <li><a href="">彩票遊戲</a></li>
+                            <li><a href="">電子遊戲</a></li>
+                            <li><a href="">捕魚遊戲</a></li>
+                            <li><a href="">優惠活動</a></li>
+                            <li><a href="">合作方案</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- === mbrBody === -->
+        <div class="mbrBody">
+            <div class="inner">
+                <div class="mbrMenu">
+                    <ul>
+                        <li>個人資料</li>
+                        <li class="on">保險櫃</li>
+                        <li>一般錢包</li>
+                        <li>下注紀錄</li>
+                        <li>卡片管理</li>
+                    </ul>
+                </div>
+                <div class="mbrCnt">
+                    <!-- 個人資料 -->
+                    <div class="inforBox" style="display: none;">
+                        <form>
+                            <div class="msgDiv">
+                                <div class="divTitle">基本資料</div>
+                                <div class="itemList">
+                                    <div class="item">
+                                        <div class="iptTitle">真實姓名</div>
+                                        <input type="text" placeholder="姓名需與銀行卡持卡人姓名一致，否則無法提款">
+                                    </div>
+                                    <div class="item">
+                                        <div class="iptTitle">性別</div>
+                                        <div class="selList">
+                                            <ul>
+                                                <li class="on">男</li>
+                                                <li>女</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="iptTitle">出生日期</div>
+                                        <input type="date">
+                                    </div>
+                                    <div class="item">
+                                        <div class="iptTitle">手機號碼</div>
+                                        <input type="tel">
+                                    </div>
+                                    <div class="item">
+                                        <div class="iptTitle">Email</div>
+                                        <input type="email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bankDiv">
+                                <div class="divTitle">銀行卡資料</div>
+                                <div class="itemList">
+                                    <div class="item">
+                                        <div class="iptTitle">銀行名稱</div>
+                                        <input type="text">
+                                    </div>
+                                    <div class="item">
+                                        <div class="iptTitle">銀行代碼</div>
+                                        <input type="text">
+                                    </div>
+                                    <div class="item">
+                                        <div class="iptTitle">帳號</div>
+                                        <input type="text" placeholder="XXXX XXXX XXXX XXXX">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inforTool">
+                                <div class="regTime">註冊時間<span>2022/04/27 16:47:28</span></div>
+                                <button class="submitBtn">完成</button>
+                            </div>
+                        </form>  
+                    </div>
+
+                    <!-- 保險櫃 -->
+                    <div class="strongBox" style="display: none;">
+                        <div class="sortSel">
+                            <div class="surplus">
+                                <span>保險櫃餘額</span>
+                                <p data-currency="NT">888,000.00</p>
+                            </div>
+                            <div class="selBox">
+                                <ul>
+                                    <li class="on">
+                                        <div class="icon deposit"></div>
+                                        <p>存款</p>
+                                    </li>
+                                    <li>
+                                        <div class="icon transfer"></div>
+                                        <p>轉帳</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 存款 -->
+                        <div class="depositBox">
+                            <form>
+                                <div class="selBank">
+                                    <div class="divTitle">選擇銀行</div>
+                                    <select>
+                                        <option>工商銀行</option>
+                                        <option>公股銀行</option>
+                                    </select>
+                                </div>
+                                <div class="depositAmount">
+                                    <div class="divTitle">存款金額</div>
+                                    <div class="itemList">
+                                        <div class="item">
+                                            <div class="selList">
+                                                <ul>
+                                                    <li class="on">NT 100</li>
+                                                    <li>NT 200</li>
+                                                    <li>NT 300</li>
+                                                    <li>NT 400</li>
+                                                    <li>NT 500</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="iptSp hasTag">
+                                                <input type="text" placeholder="請輸入100-9999元之間的金額">
+                                                <div class="tag">建議您存入帶尾數的金額（例101、503），以便存款後能更快匹配到帳</div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <button class="submitBtn">立即存款</button>
+                                        </div>
+                                    </div>              
+                                </div>
+                            </form>
+                        </div>
+                        <!-- 轉帳 -->
+                        <div class="transferBox" style="display: none;">
+                            <div class="divTitle">轉帳金額</div>
+                            <form>
+                                <div class="itemList">
+                                    <div class="item">
+                                        <div class="selChange">
+                                            <select>
+                                                <option>保險櫃</option>
+                                                <option>一般錢包</option>
+                                            </select>
+                                            <div class="chBtn"></div>
+                                            <select>
+                                                <option>保險櫃</option>
+                                                <option>一般錢包</option>
+                                            </select>
+                                        </div>            
+                                    </div>
+                                    <div class="item">
+                                        <div class="iptSp hasBtn">
+                                            <input type="number" placeholder="0.00">
+                                            <div class="maxAmount">最大金額</div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <button class="submitBtn">立即轉帳</button>
+                                    </div>
+                                </div>   
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- 一般錢包 -->
+                    <div class="walletBox" style="display: block;">
+                        <div class="sortSel">
+                            <div class="surplus">
+                                <span>保險櫃餘額</span>
+                                <p data-currency="NT">888,000.00</p>
+                            </div>
+                            <div class="selBox">
+                                <ul>
+                                    <li class="on">
+                                        <div class="icon deposit"></div>
+                                        <p>存款</p>
+                                    </li>
+                                    <li>
+                                        <div class="icon transfer"></div>
+                                        <p>轉帳</p>
+                                    </li>
+                                    <li>
+                                        <div class="icon withdraw"></div>
+                                        <p>取款</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                         <!-- 存款 -->
+                         <div class="depositBox" style="display: none;">
+                            <form>
+                                <div class="selBank">
+                                    <div class="divTitle">選擇銀行</div>
+                                    <select>
+                                        <option>工商銀行</option>
+                                        <option>公股銀行</option>
+                                    </select>
+                                </div>
+                                <div class="depositAmount">
+                                    <div class="divTitle">存款金額</div>
+                                    <div class="itemList">
+                                        <div class="item">
+                                            <div class="selList">
+                                                <ul>
+                                                    <li class="on">NT 100</li>
+                                                    <li>NT 200</li>
+                                                    <li>NT 300</li>
+                                                    <li>NT 400</li>
+                                                    <li>NT 500</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="iptSp hasTag">
+                                                <input type="text" placeholder="請輸入100-9999元之間的金額">
+                                                <div class="tag">建議您存入帶尾數的金額（例101、503），以便存款後能更快匹配到帳</div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <button class="submitBtn">立即存款</button>
+                                        </div>
+                                    </div>              
+                                </div>
+                            </form>
+                        </div>
+
+                         <!-- 轉帳 -->
+                         <div class="transferBox" style="display: none;">
+                            <div class="divTitle">轉帳金額</div>
+                            <form>
+                                <div class="itemList">
+                                    <div class="item">
+                                        <div class="selChange">
+                                            <select>
+                                                <option>保險櫃</option>
+                                                <option>一般錢包</option>
+                                            </select>
+                                            <div class="chBtn"></div>
+                                            <select>
+                                                <option>保險櫃</option>
+                                                <option>一般錢包</option>
+                                            </select>
+                                        </div>            
+                                    </div>
+                                    <div class="item">
+                                        <div class="iptSp hasBtn">
+                                            <input type="number" placeholder="0.00">
+                                            <div class="maxAmount">最大金額</div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <button class="submitBtn">立即轉帳</button>
+                                    </div>
+                                </div>   
+                            </form>
+                        </div>
+
+                        <!-- 取款 -->
+                        <div class="withdrawBox">
+                            <form>
+                                <div class="selBank">
+                                    <div class="divTitle">選擇銀行</div>
+                                    <select>
+                                        <option>工商銀行</option>
+                                        <option>公股銀行</option>
+                                    </select>
+                                    <div class="cardMsg">
+                                        <ul>
+                                            <li>
+                                                <div class="cardTitle">台新銀行</div>
+                                                <p>XXXX XXXX XXXX 3336</p>
+                                            </li>
+                                            <li>
+                                                <div class="cardTitle">綁卡日期</div>
+                                                <p>022/02/08</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="withdrawIpt">
+                                    <div class="available">
+                                        可取款金額
+                                        <p data-coin="NT">500,000.00</p>
+                                    </div>
+                                    <div class="itemList">
+                                        <div class="item">
+                                            <p>取款金額</p>
+                                            <input type="text" placeholder="每次最低取款金額為NT 1,000">
+                                        </div>
+                                        <div class="item">
+                                            <p>提款密碼</p>
+                                            <input type="password" placeholder="請輸入8位數英文加數字密碼">
+                                        </div>
+                                        <div class="item">
+                                            <button class="submitBtn">提交申請</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- 下注紀錄 -->
+                    <div class="historyBox" style="display: none;">
+                        <div class="toolBox">
+                            <div class="divTitle">
+                                <h5>下注紀錄</h5>
+                                <p>當前系統支持查詢最近30日的下注記錄</p>
+                            </div>
+                            <div class="itemList">
+                                <div class="item">
+                                    <div class="title">遊戲</div>
+                                    <select>
+                                        <option>德州撲克</option>
+                                    </select>
+                                </div>
+                                <div class="item">
+                                    <div class="title">日期</div>
+                                    <div class="dateIpt">
+                                        <input type="date">
+                                        <span>~</span>
+                                        <input type="date">
+                                    </div>
+                                    <div class="dateSel">
+                                        <ul>
+                                            <li>昨日</li>
+                                            <li class="on">今日</li>
+                                            <li>近7日</li>
+                                            <li>近30日</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="submitBtn">查詢</div>
+                                    <div class="submitBtn trn">重置</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="historyList">
+                            <div class="msgTitle">
+                                <div class="icon"></div>
+                                <div class="msg">
+                                    <p>共計：<span>0</span>筆投注</p>
+                                    <p>流水：<span>0.00</span></p>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <table>
+                                    <tr>
+                                        <th width="10%">序號</th>
+                                        <th width="10%">日期</th>
+                                        <th width="10%">遊戲</th>
+                                        <th width="25%">下注內容</th>
+                                        <th width="5%">賠率</th>
+                                        <th width="10%">流水</th>
+                                        <th width="5%">輸 / 贏</th>
+                                    </tr>
+                                    <tr>
+                                        <td>BSEAQ1553211</td>
+                                        <td>2022/04/25</td>
+                                        <td>德州撲克</td>
+                                        <td class="left">短短的暫定內容</td>
+                                        <td>1:100</td>
+                                        <td>1000</td>
+                                        <td>贏</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SEACR1561118</td>
+                                        <td>2022/04/30</td>
+                                        <td>德州撲克</td>
+                                        <td class="left">長長的暫定內容長長的暫定內容長長的暫定內容長長的暫定內容長長的暫定內容長長的暫定內容長長的暫定內容長長的暫定內容長長的暫定內容長長的暫定內容長長的暫定內容</td>
+                                        <td>1:10</td>
+                                        <td>1000</td>
+                                        <td>輸</td>
+                                    </tr>
+                                </table>
+                                <div class="noList">
+                                    <div class="icon">
+                                        <img src="images/icon/noList.png">
+                                    </div>
+                                   <p>暫無下注記錄</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>          
+        </div>
+
+        <!-- === ftBox start === -->
+        <div class="ftBox">
+            <div class="ftMenu">
+                <ul>
+                    <li><a href="">關於我們</a></li>
+                    <li><a href="">代理專區</a></li>
+                    <li><a href="">免責聲明</a></li>
+                    <li><a href="">法律鏈結</a></li>
+                    <li><a href="">聯繫我們</a></li>
+                    <li><a href="">幫助中心</a></li>
+                </ul>
+            </div>
+            <div class="ftLink">
+                <div class="list">
+                    <ul>
+                        <li>
+                            <img src="images/ftLInk/responsiblegaming.png">
+                        </li>
+                        <li>
+                            <img src="images/ftLInk/gamcare.png">
+                        </li>
+                        <li>
+                            <img src="images/ftLInk/18plus.png">
+                        </li>
+                        <li>
+                            <img src="images/ftLInk/askgamblers.png">
+                        </li>
+                        <li>
+                            <img src="images/ftLInk/casinoPublic.png">
+                        </li>
+                        <li>
+                            <img src="images/ftLInk/gamblingTherapy.png">
+                        </li>
+                        <li>
+                            <img src="images/ftLInk/provablyfair.png">
+                        </li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    <p>版權所有&copy;百得之保留所有權</p>
+                </div>
+            </div>
+        </div>
+    </div>  
+</body>
+</html>

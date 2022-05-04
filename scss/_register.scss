@@ -1,0 +1,176 @@
+$iptBg: #dadee7;
+$iptColor: #fff;
+$errorTxt: #eeba50;
+// body {
+//     background: #0c0c0c url(../images/bg/loginBg.webp) no-repeat fixed left bottom / 1920px 1080px;
+// }
+
+.regBox {
+    width: 100%;
+    max-width: 1600px;
+    padding: 0 15px 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    .innerBox {
+        width: 500px;
+        padding: 40px 50px 80px;
+        margin: 100px 50px 0 0;
+        border-radius: 5px;
+        border: 2px solid rgba(42, 42, 42, 0.9);
+        background: linear-gradient(0deg,rgba(4, 4, 4, 0.7) 60%,rgba(100, 100, 100, 0.7));
+        @include rwd(660){
+            margin: 100px auto 0;
+        }
+        .logo {
+            width: 120px;
+            margin: 0 auto 60px;
+            position: relative;
+        }
+        .iptBox {
+            .list {
+                margin-bottom: 40px;
+                li {
+                    .item {
+                        height: 43px;
+                        position: relative;
+                        display: flex;
+                        align-items: center;                 
+                        &.pwd {
+                            input {
+                                width: calc(100% - 40px);
+                            }
+                        }
+                    }
+                    label {
+                        width: 100%;
+                        margin-left: 10px;
+                        padding: 0 10px 8px 15px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        border-bottom: 1px solid #fff;
+                    }
+                }
+                li + li {
+                    margin-top: 10px;
+                }
+                input{
+                    width: 100%;
+                    @include fullNone;
+                    padding: 0 10px;
+                    font-size: 15px;
+                    color: $iptColor;
+                }
+                .icon {
+                    width: 22px;
+                    height: 22px;
+                    flex-shrink: 0;
+                    background: no-repeat center;
+                    &.user {
+                        background-image: url(../images/icon/idCard.svg);
+                    }
+                    &.pwd {
+                        background-image: url(../images/icon/key.svg);
+                    }
+                    &.phone {
+                        background-image: url(../images/icon/phone.svg);
+                    }
+                    &.check {
+                        background-image: url(../images/icon/check.svg);
+                    }
+                    &.portrait {
+                        background-image: url(../images/icon/portrait.svg);
+                    }
+                    &.verify {
+                        background-image: url(../images/icon/shield.svg);
+                    }
+                    &.eye {
+                        width: 18px;
+                        height: 18px;
+                        background-image: url(../images/icon/eye_off.svg);
+                        cursor: pointer;
+                        &.on {
+                            background-image: url(../images/icon/eye_on.svg);
+                        }
+                    }
+                }
+                .errorTxt {
+                    font-size: 12px;
+                    line-height: 16px;
+                    color: $errorTxt;
+                    text-align: right;
+                }
+            }
+            .iptTool {
+                padding: 20px 0 10px;
+                display: flex;
+                flex-direction: column;
+                .ckBox {
+                    margin-bottom: 10px;
+                    color: #eee;
+                    font-size: 13px;
+                    label {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                    }
+                    input {
+                        display: none;
+                    }
+                    .icon {
+                        width: 22px;
+                        height: 22px;
+                        margin-left: 3px;
+                        background: url(../images/icon/ckBox_off.svg) no-repeat center top / cover;
+                    }
+                    input:checked + .icon {
+                        background-image: url(../images/icon/ckBox_on.svg);
+                    }
+                    a {
+                        color: #eb3b35;
+                    }
+                }
+                .submitBox {
+                    width: 100%;
+                    button {
+                        @include fullNone;
+                        width: 100%;
+                        height: 45px;
+                        border-radius: 45px;
+                        color: #fff;
+                        font-size: 18px;
+                        letter-spacing: 1px;
+                        font-weight: bold;
+                        background: linear-gradient(135deg,#b68338,#966318);
+                        cursor: pointer;
+                    }
+                    .tool {
+                        width: 100%;
+                        padding-top: 10px;
+                        color: #eee;
+                        font-size: 12px;
+                        ul {
+                            display: flex;
+                            justify-content: center;
+                        }
+                        li {
+                            position: relative;
+                        }
+                        li + li {
+                            margin-left: 20px;
+                            &::before {
+                                content: "|";
+                                position: absolute;
+                                top: 0;
+                                left: -10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
