@@ -1,4 +1,4 @@
-.loadBody{
+.loadBody {
     width: 100%;
     height: 100vh;
     background: url(../images/bg/loadBg.webp) bottom center fixed;
@@ -6,121 +6,184 @@
     align-items: center;
     justify-content: center;
     overflow-y: auto;
-    .inner{
+    .inner {
         padding-top: 120px;
     }
-    .logo{
+    .logo {
         width: 170px;
         margin: 0 auto 40px;
         position: relative;
         z-index: 2;
     }
-    .loadTxt{
+    .loadTxt {
         color: #fecc62;
         text-align: center;
         position: relative;
         z-index: 2;
         font-weight: bold;
-        -webkit-box-reflect: below -5px linear-gradient(transparent,rgba(0, 0, 0, 0.5));
-        &::before{
-            content: '[ ';
+        -webkit-box-reflect: below -5px linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+        &::before {
+            content: "[ ";
             padding-right: 5px;
         }
-        &::after{
-            content: ']';
+        &::after {
+            content: "]";
             padding-left: 5px;
         }
-        span{
+        span {
             position: relative;
             display: inline-block;
             animation: jump 1.5s ease-in-out infinite;
-            animation-delay: calc(.1s*var(--i));
+            animation-delay: calc(0.1s * var(--i));
         }
     }
-    .loadPic{
+    .loadPic {
         width: 424px;
         height: 474px;
-        // background: url(../test.png) no-repeat center/cover;
         position: relative;
         transform: translateY(-180px);
-        .light{
+        .light {
             width: 100%;
             animation: flicker 2s infinite linear;
-            transform-origin: top center;    
+            transform-origin: top center;
         }
-        .backCard{
+        .backCard {
             width: 60%;
             margin: auto;
             position: absolute;
             top: 43%;
             left: 0;
             right: 0;
-            animation: zoom 3s linear infinite;
+            animation: float 3s linear infinite;
         }
-        .dice{
+        .diceBox {
+            width: 100%;
+            height: 100%;
             position: absolute;
-            animation: rotate infinite linear;
+            @include pos(tl, 0);
+            .dice {
+                position: absolute;
+                animation: rotate30 infinite linear;
+            }
+            .d1 {
+                width: 11%;
+                @include pos(tl, 68%, 21%);
+                animation-duration: 1.5s;
+            }
+            .d2 {
+                width: 16%;
+                @include pos(tl, 48%, 40%);
+                animation-duration: 3s;
+            }
+            .d3 {
+                width: 9%;
+                @include pos(tr, 69%, 37%);
+                animation-duration: 2s;
+            }
+            .d4 {
+                width: 14%;
+                @include pos(tr, 56%, 16%);
+                animation-duration: 2.5s;
+            }
         }
-        .d1{
-            width: 11%;
-            @include pos(tl,68%,21%);
-            animation-duration: 1.5s;
-        }
-        .d2{
-            width: 16%;
-            @include pos(tl,48%,40%);
-            animation-duration: 3s;
-        }
-        .d3{
-            width: 9%;
-            @include pos(tr,69%,37%);
-            animation-duration: 2s;
-        }
-        .d4{
-            width: 14%;
-            @include pos(tr,56%,16%);
-            animation-duration: 2.5s;
+        .cardBox {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            @include pos(tl, 0);
+            .card {
+                position: absolute;
+                opacity: 0;
+                animation: opacity 3s linear infinite;
+            }
+            .c1 {
+                width: 18%;
+                @include pos(tl, 68.5%, 12%);
+                animation-delay: 0s;
+            }
+            .c2 {
+                width: 18%;
+                @include pos(tl, 70.5%, 11%);
+                animation-delay: .1s;
+            }
+            .c3 {
+                width: 18%;
+                @include pos(tl, 79%, 15%);
+                animation-delay: .2s;
+            }
+            .c4 {
+                width: 19%;
+                @include pos(tl, 82%, 19%);
+                animation-delay: .3s;
+            }
+            .c5 {
+                width: 18%;
+                @include pos(tl, 83.5%, 26%);
+                animation-delay: .4s;
+            }
+            .c6 {
+                width: 18%;
+                @include pos(tl, 83.5%, 33%);
+                animation-delay: .5s;
+            }
         }
     }
 }
 
 @keyframes jump {
-    0%,40%,100%{
+    0%,
+    40%,
+    100% {
         transform: translateY(0);
         color: #fecc62;
     }
-    20%{
+    20% {
         transform: translateY(-10px);
         color: #fff;
     }
 }
 
-@keyframes flicker{
-    0%,100%{
-        opacity: .5;
+@keyframes flicker {
+    0%,
+    100% {
+        opacity: 0.5;
     }
-    50%{
+    50% {
         opacity: 1;
     }
 }
 
-@keyframes rotate{
-    0%,50%,100%{
+@keyframes rotate30 {
+    0%,
+    50%,
+    100% {
         transform: rotate(0deg);
     }
-    25%{
-        transform: rotate(-30deg); 
+    25% {
+        transform: rotate(-30deg);
     }
-    75%{
+    75% {
         transform: rotate(30deg);
     }
 }
 
-@keyframes zoom{
-    0%,100%{
-        transform: scale(1);
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
     }
-    50%{
-        transform: scale(0.95);
+    50% {
+        transform: translateY(-10px);
     }
 }
+
+@keyframes opacity {
+    0%{
+        opacity: 1;
+    }
+    50%,
+    100% {
+        opacity: 0;
+    }
+}
+

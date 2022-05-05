@@ -1807,12 +1807,12 @@ body::-webkit-scrollbar {
 }
 
 .loadBody .loadTxt::before {
-  content: '[ ';
+  content: "[ ";
   padding-right: 5px;
 }
 
 .loadBody .loadTxt::after {
-  content: ']';
+  content: "]";
   padding-left: 5px;
 }
 
@@ -1821,8 +1821,8 @@ body::-webkit-scrollbar {
   display: inline-block;
   -webkit-animation: jump 1.5s ease-in-out infinite;
           animation: jump 1.5s ease-in-out infinite;
-  -webkit-animation-delay: calc(.1s*var(--i));
-          animation-delay: calc(.1s*var(--i));
+  -webkit-animation-delay: calc(0.1s * var(--i));
+          animation-delay: calc(0.1s * var(--i));
 }
 
 .loadBody .loadPic {
@@ -1848,17 +1848,26 @@ body::-webkit-scrollbar {
   top: 43%;
   left: 0;
   right: 0;
-  -webkit-animation: zoom 3s linear infinite;
-          animation: zoom 3s linear infinite;
+  -webkit-animation: float 3s linear infinite;
+          animation: float 3s linear infinite;
 }
 
-.loadBody .loadPic .dice {
+.loadBody .loadPic .diceBox {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  -webkit-animation: rotate infinite linear;
-          animation: rotate infinite linear;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.loadBody .loadPic .d1 {
+.loadBody .loadPic .diceBox .dice {
+  position: absolute;
+  -webkit-animation: rotate30 infinite linear;
+          animation: rotate30 infinite linear;
+}
+
+.loadBody .loadPic .diceBox .d1 {
   width: 11%;
   position: absolute;
   top: 68%;
@@ -1867,7 +1876,7 @@ body::-webkit-scrollbar {
           animation-duration: 1.5s;
 }
 
-.loadBody .loadPic .d2 {
+.loadBody .loadPic .diceBox .d2 {
   width: 16%;
   position: absolute;
   top: 48%;
@@ -1876,7 +1885,7 @@ body::-webkit-scrollbar {
           animation-duration: 3s;
 }
 
-.loadBody .loadPic .d3 {
+.loadBody .loadPic .diceBox .d3 {
   width: 9%;
   position: absolute;
   top: 69%;
@@ -1885,7 +1894,7 @@ body::-webkit-scrollbar {
           animation-duration: 2s;
 }
 
-.loadBody .loadPic .d4 {
+.loadBody .loadPic .diceBox .d4 {
   width: 14%;
   position: absolute;
   top: 56%;
@@ -1894,8 +1903,80 @@ body::-webkit-scrollbar {
           animation-duration: 2.5s;
 }
 
+.loadBody .loadPic .cardBox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.loadBody .loadPic .cardBox .card {
+  position: absolute;
+  opacity: 0;
+  -webkit-animation: opacity 3s linear infinite;
+          animation: opacity 3s linear infinite;
+}
+
+.loadBody .loadPic .cardBox .c1 {
+  width: 18%;
+  position: absolute;
+  top: 68.5%;
+  left: 12%;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.loadBody .loadPic .cardBox .c2 {
+  width: 18%;
+  position: absolute;
+  top: 70.5%;
+  left: 11%;
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
+}
+
+.loadBody .loadPic .cardBox .c3 {
+  width: 18%;
+  position: absolute;
+  top: 79%;
+  left: 15%;
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+}
+
+.loadBody .loadPic .cardBox .c4 {
+  width: 19%;
+  position: absolute;
+  top: 82%;
+  left: 19%;
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+}
+
+.loadBody .loadPic .cardBox .c5 {
+  width: 18%;
+  position: absolute;
+  top: 83.5%;
+  left: 26%;
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+
+.loadBody .loadPic .cardBox .c6 {
+  width: 18%;
+  position: absolute;
+  top: 83.5%;
+  left: 33%;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
 @-webkit-keyframes jump {
-  0%, 40%, 100% {
+  0%,
+  40%,
+  100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
     color: #fecc62;
@@ -1908,7 +1989,9 @@ body::-webkit-scrollbar {
 }
 
 @keyframes jump {
-  0%, 40%, 100% {
+  0%,
+  40%,
+  100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
     color: #fecc62;
@@ -1921,8 +2004,9 @@ body::-webkit-scrollbar {
 }
 
 @-webkit-keyframes flicker {
-  0%, 100% {
-    opacity: .5;
+  0%,
+  100% {
+    opacity: 0.5;
   }
   50% {
     opacity: 1;
@@ -1930,16 +2014,19 @@ body::-webkit-scrollbar {
 }
 
 @keyframes flicker {
-  0%, 100% {
-    opacity: .5;
+  0%,
+  100% {
+    opacity: 0.5;
   }
   50% {
     opacity: 1;
   }
 }
 
-@-webkit-keyframes rotate {
-  0%, 50%, 100% {
+@-webkit-keyframes rotate30 {
+  0%,
+  50%,
+  100% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
@@ -1953,8 +2040,10 @@ body::-webkit-scrollbar {
   }
 }
 
-@keyframes rotate {
-  0%, 50%, 100% {
+@keyframes rotate30 {
+  0%,
+  50%,
+  100% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
@@ -1968,25 +2057,47 @@ body::-webkit-scrollbar {
   }
 }
 
-@-webkit-keyframes zoom {
-  0%, 100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+@-webkit-keyframes float {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   50% {
-    -webkit-transform: scale(0.95);
-            transform: scale(0.95);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
   }
 }
 
-@keyframes zoom {
-  0%, 100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+@keyframes float {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   50% {
-    -webkit-transform: scale(0.95);
-            transform: scale(0.95);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
   }
 }
 
@@ -2009,7 +2120,7 @@ body::-webkit-scrollbar {
 }
 
 .indexBody .hdBox .hdBody {
-  max-width: 1920px;
+  max-width: 1800px;
 }
 
 .indexBody .hdBox .inner {
